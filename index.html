@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bioskop Mini UTS</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #1a1a1a; color: #fff; margin: 0; padding: 20px; }
+        h1 { text-align: center; color: #e50914; }
+        .container { max-width: 700px; margin: auto; background: #2b2b2b; padding: 20px; border-radius: 8px; }
+        .movie-list { display: flex; gap: 15px; margin-bottom: 30px; justify-content: center; }
+        .movie-card { background: #333; padding: 15px; border-radius: 8px; text-align: center; width: 30%; }
+        .movie-card h3 { margin: 10px 0 5px; color: #f5c518; }
+        .movie-card p { font-size: 14px; color: #ccc; margin: 5px 0; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; }
+        input, select { width: 100%; padding: 10px; border: none; border-radius: 4px; box-sizing: border-box; }
+        button { width: 100%; padding: 10px; background-color: #e50914; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; font-weight: bold; }
+        button:hover { background-color: #b20710; }
+        hr { border: 1px solid #444; margin: 30px 0; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🍿 Bioskop Mini 🍿</h1>
+    
+    <div class="movie-list">
+        <div class="movie-card">
+            <h3>Spider-Man</h3>
+            <p>Action | 14:00</p>
+        </div>
+        <div class="movie-card">
+            <h3>Interstellar</h3>
+            <p>Sci-Fi | 16:30</p>
+        </div>
+        <div class="movie-card">
+            <h3>Joker</h3>
+            <p>Drama | 19:00</p>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2>Pesan Tiket</h2>
+    <form id="bookingForm">
+        <div class="form-group">
+            <label for="nama">Nama Pemesan:</label>
+            <input type="text" id="nama" placeholder="Masukkan namamu" required>
+        </div>
+        <div class="form-group">
+            <label for="film">Pilih Film:</label>
+            <select id="film" required>
+                <option value="">-- Pilih Film --</option>
+                <option value="Spider-Man">Spider-Man</option>
+                <option value="Interstellar">Interstellar</option>
+                <option value="Joker">Joker</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="jumlah">Jumlah Tiket:</label>
+            <input type="number" id="jumlah" min="1" max="5" placeholder="Maksimal 5 tiket" required>
+        </div>
+        <button type="submit">Pesan Sekarang</button>
+    </form>
+</div>
+
+<script>
+    // Logika sederhana saat tombol pesan ditekan
+    document.getElementById('bookingForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Mencegah web reload
+        
+        let nama = document.getElementById('nama').value;
+        let film = document.getElementById('film').value;
+        let jumlah = document.getElementById('jumlah').value;
+        
+        // Menampilkan notifikasi popup
+        alert(`🎉 BERHASIL! 🎉\n\nNama: ${nama}\nFilm: ${film}\nJumlah:${jumlah} Tiket\n\nSelamat menonton!`);
+        
+        this.reset(); // Mengosongkan form
+    });
+</script>
+
+</body>
+</html>
