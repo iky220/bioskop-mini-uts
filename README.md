@@ -7,4 +7,4 @@ Project sederhana sistem pemesanan tiket bioskop untuk memenuhi Ujian Tengah Sem
 * Notifikasi sukses pemesanan
 
 ## Link Video Penjelasan
-[Klik di sini untuk menonton video presentasi UTS](#) *(Nanti ganti tanda # dengan link YouTubemu)*
+https://youtu.be/axnvAoUNB-E?si=l80XNlrXumjwdv-a
